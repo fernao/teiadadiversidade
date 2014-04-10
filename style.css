@@ -56,11 +56,11 @@ body {
 #coluna_esquerda { width: 15%; float: left; min-width: 160px}
 #coluna_direita { width: 20%; float: right; min-width: 160px}
 
-#coluna_esquerda_grande { float: left; min-width: 400px}
-#coluna_direita_grande { float: right; min-width: 400px }
+#coluna_esquerda_grande { min-width: 300px}
+#coluna_direita_grande {  min-width: 300px }
 
-#primary { width: 50%; float: left; background-color: #fff; min-width: 300px }
-.site-info { width: 50%}
+#primary { width: 45%; float: left; background-color: #fff; min-width: 250px }
+.site-info { width: 60%}
 
 .home #primary {
     float: none; width: 100%

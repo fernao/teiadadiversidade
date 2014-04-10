@@ -45,11 +45,25 @@
 		</header><!-- #masthead -->
    
 		<div id="main" class="site-main">
-<!-- #colunas -->
+<?php if ( is_active_sidebar( 'coluna_esquerda' ) ) { ?>
 <?php dynamic_sidebar('coluna_esquerda'); ?>
+<?php } else { ?>
+<div id="coluna_esquerda"></div>
+<?php } ?>
 <?php if ( is_active_sidebar( 'coluna_direita' ) ) { ?>
  <?php dynamic_sidebar('coluna_direita'); ?>
 <?php } else { ?>
 <div id="coluna_direita"></div>
+<?php } ?>						  
+
+<?php if ( is_active_sidebar( 'coluna_esquerda_grande' ) ) { ?>
+<?php dynamic_sidebar('coluna_esquerda_grande'); ?>
+<?php } else { ?>
+<div id="coluna_esquerda_grande"></div>
+<?php } ?>
+<?php if ( is_active_sidebar( 'coluna_direita_grande' ) ) { ?>
+ <?php dynamic_sidebar('coluna_direita_grande'); ?>
+<?php } else { ?>
+<div id="coluna_direita_grande"></div>
 <?php } ?>						  
 
