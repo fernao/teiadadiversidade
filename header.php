@@ -30,7 +30,6 @@
         <?php
 			wp_enqueue_script('jquery');
 			wp_enqueue_script('jquery-ui-tabs', 'jquery');
-			wp_enqueue_script('functions', get_bloginfo('template_directory').'/js/functions.js', 'jquery');
 			wp_head();
 		?>
 </head>

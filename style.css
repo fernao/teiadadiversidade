@@ -141,6 +141,25 @@ div.btn-interna {
 .btn-interna #btn-imprensa .img-btn:hover { background-image: url(../../../wp-content/themes/teiadadiversidade/img/imprensa.txt.png); }
 .btn-interna #btn-contato .img-btn:hover { background-image: url(../../../wp-content/themes/teiadadiversidade/img/contato.txt.png); }
 
+/*  */
+#home_destaque .widgettitle { 
+    display: none;
+}
+
+.widget_destaque .hlTabs {
+    width: 638px;
+    margin: 0 auto;
+}
+
+.widget_destaque .hlTabs ul {
+    position: relative;
+    top: 280px;
+}
+
+.widget_destaque .hlTabs img {
+    width: 100%;
+    height: 100%;
+}
 
 /* linha do tempo */
 

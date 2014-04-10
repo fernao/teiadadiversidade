@@ -1,7 +1,9 @@
-cncvirtual
+teiadadiversidade
 ==========
 
-Tema da Conferência Virtual da Conferência Nacional de Cultura
+Tema da Teia da Diversidade
 
-Baseado no tema MinC-Consulta (Hacklab http://hacklab.com.br/)
-Modificado por Fernão Lopes (fernao@riseup.net)
+Baseado nos temas TwentyThirteen e CDigital 
+
+Desenho por Wallace Deo (wallace.deo@gmail.com)
+Código por Fernão Lopes (fernao@riseup.net)

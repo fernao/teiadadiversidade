@@ -22,9 +22,6 @@ class widget_hightlights extends WP_Widget
 		$maxPages = empty($instance['maxPages']) ? 5 : $instance['maxPages'];
 		
 		$query = new HL_Query( "headline_category_name=headlines" );
-		//print "<hr>";
-		//print_r($query);
-		//print "<hr>";
 		if($query->have_posts()) :
 		
 		echo $before_widget;
