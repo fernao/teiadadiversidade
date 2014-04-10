@@ -24,6 +24,8 @@ if(function_exists('register_sidebar')) {
   my_register_sidebar('home_menu');
   my_register_sidebar('coluna_esquerda');
   my_register_sidebar('coluna_direita');
+  my_register_sidebar('coluna_esquerda_grande');
+  my_register_sidebar('coluna_direita_grande');
 }
 
 // permite que usuários comuns acessem apenas a página

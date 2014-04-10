@@ -45,8 +45,8 @@
 		</header><!-- #masthead -->
    
 		<div id="main" class="site-main">
-<!-- #coluna_esquerda -->
- <?php dynamic_sidebar('coluna_esquerda'); ?>
+<!-- #colunas -->
+<?php dynamic_sidebar('coluna_esquerda'); ?>
 <?php if ( is_active_sidebar( 'coluna_direita' ) ) { ?>
  <?php dynamic_sidebar('coluna_direita'); ?>
 <?php } else { ?>
