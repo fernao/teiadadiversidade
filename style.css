@@ -17,6 +17,10 @@ body {
     background-attachment: fixed;
 }
 
+#content { 
+    background: #fff;
+}
+
 .site {
     width: 90%;
 }
@@ -53,14 +57,14 @@ body {
 #home_menu {}
 #home_destaque { }
 #home_menu { }
-#coluna_esquerda { width: 15%; float: left; min-width: 160px}
+#coluna_esquerda { width: 15%; float: left; min-width: 60px}
 #coluna_direita { width: 20%; float: right; min-width: 160px}
 
-#coluna_esquerda_grande { min-width: 300px}
-#coluna_direita_grande {  min-width: 300px }
+#coluna_esquerda_interna-page { min-width: 300px; float: left; width: 32%;  }
+#coluna_direita_interna-page {  min-width: 300px; float: left; width: 32%;  }
 
-#primary { width: 45%; float: left; background-color: #fff; min-width: 250px }
-.site-info { width: 60%}
+#primary { width: 65%; float: left; background-color: #fff; min-width: 250px }
+.site-info { width: 65%}
 
 .home #primary {
     float: none; width: 100%
@@ -164,7 +168,7 @@ div.btn-interna {
     width: 638px;
     margin: 0 auto;
     position: relative;
-    top: -33px;
+    top: -36px;
 }
 
 #home_destaque.widget_text, #home_destaque.widget_destaque, #home_destaque.widget {
