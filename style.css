@@ -56,7 +56,7 @@ body {
 #coluna_esquerda { width: 15%; float: left; min-width: 60px}
 #coluna_direita { width: 20%; float: right; }
 
-#primary { width: 65%; float: left; background-color: #fff }
+#primary { width: 60%; float: left; background-color: #fff }
 .site-info { width: 65%}
 
 .home #primary {
@@ -145,7 +145,6 @@ div.btn-interna {
 /* aba de destaque da home  */
 #home_destaque-container {
     max-width:750px; 
-    height: 300px;
     margin: 0 auto;
 }
 
@@ -167,6 +166,7 @@ div.btn-interna {
 
 #home_destaque.widget_text, #home_destaque.widget_destaque, #home_destaque.widget {
     margin: 0;
+    height: 300px;
 }
 
 #home_destaque .textwidget {
