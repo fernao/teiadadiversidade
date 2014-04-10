@@ -29,7 +29,13 @@ body {
     clear: both;
 }
 
-.site-header {background: url(img/logo.teia.png) no-repeat scroll left top rgba(0, 0, 0, 0) !important}
+.site-header {background: none !important }
+
+.site-logo {
+    background: url(img/logo.teia.png) no-repeat scroll left top rgba(0, 0, 0, 0) !important;
+    width: 533px;
+    height: 171px;
+}
 
 .sidebar-inner .widget-area {
     width: 10%;
@@ -53,10 +59,6 @@ body {
 .site-footer {background-color: #fff }
 
 /* dynamic sidebars */
-#main {}
-#home_menu {}
-#home_destaque { }
-#home_menu { }
 #coluna_esquerda { width: 15%; float: left; min-width: 60px}
 #coluna_direita { width: 20%; float: right; min-width: 160px}
 
@@ -67,11 +69,19 @@ body {
 .site-info { width: 65%}
 
 .home #primary {
-    float: none; width: 100%
+    float: none; 
+    width: 100%
+}
+
+#home_header-container {
+    margin: 0 auto;
+    width: 750px;
+}
+
+#home_header-container #logo_container {
 }
 
 /* botoes - links */
-
 div.btn-home-container {
     background-color: #F00;
     width: 100%;
@@ -178,7 +188,7 @@ div.btn-interna {
 
 #home_destaque .textwidget {
     margin-left: 10px;
-    width: 50px;
+    width: 100px;
     background-color: #666;
     height: 300px;
 }

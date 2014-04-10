@@ -10,7 +10,7 @@
  * @link http://codex.wordpress.org/Template_Hierarchy
  *
  * @package WordPress
- * @subpackage Teia2014
+ * @subpackage Teiadadiversidade
  * @since Teia 2014
  */
 ?><!DOCTYPE html>
@@ -43,11 +43,13 @@
 <body <?php body_class(); ?>>
 	<div id="page" class="hfeed site">
 		<header id="masthead" class="site-header" role="banner">
-			<!-- #main -->
                         <!-- #home-header -->
-			  <div id="home_header-header">
-			  <a class="home-link" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"></a>
-
+			  <div id="home_header-container">
+			    <div id="logo-container">
+			      <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+			        <div class="site-logo"></div>
+			      </a>
+			    </div>
                         <?php dynamic_sidebar('home_header'); ?>
 			  </div>
                         <!-- #home-destaque -->
