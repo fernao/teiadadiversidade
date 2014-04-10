@@ -42,8 +42,7 @@ div.widget_destaque div.hlTabs ul.ui-tabs-nav li.ui-tabs-selected a{
 
 div.widget_destaque div.hlTabs div.ui-tabs-panel{
 	color:#484848;
-	margin-top:5px;
-	padding:0;
+  	padding:0;
 }
 div.widget_destaque div.hlTabs div.ui-tabs-panel .thumb{
 	-moz-border-radius:4px;
@@ -71,9 +70,15 @@ div.widget_destaque div.hlTabs div.ui-tabs-panel div.categories a:hover{
 	font-weight:bold;
 }
 div.widget_destaque div.hlTabs div.ui-tabs-panel h2 a{
-	color:#237ba3;
+	color:#333;
 	display:block;
 	font-size:18px;
 	margin-bottom:10px;
 	text-decoration:none;
+	position: relative;
+	top: -48px;
+	margin-left: 200px;
+	background-color:#ccc;
+	opacity: 0.8;
+	
 }

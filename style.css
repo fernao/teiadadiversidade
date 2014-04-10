@@ -14,6 +14,7 @@ Template: twentythirteen
 
 body {
     background-image: url(img/fundo.png);
+    background-attachment: fixed;
 }
 
 .site {
@@ -141,7 +142,18 @@ div.btn-interna {
 .btn-interna #btn-imprensa .img-btn:hover { background-image: url(../../../wp-content/themes/teiadadiversidade/img/imprensa.txt.png); }
 .btn-interna #btn-contato .img-btn:hover { background-image: url(../../../wp-content/themes/teiadadiversidade/img/contato.txt.png); }
 
-/*  */
+/* aba de destaque da home  */
+#home_destaque-container {
+    max-width:750px; 
+    height: 300px;
+    margin: 0 auto;
+}
+
+#home_destaque-container div.widget {
+    float: left;
+    padding: 0;
+}
+
 #home_destaque .widgettitle { 
     display: none;
 }
@@ -149,6 +161,19 @@ div.btn-interna {
 .widget_destaque .hlTabs {
     width: 638px;
     margin: 0 auto;
+    position: relative;
+    top: -33px;
+}
+
+#home_destaque.widget_text, #home_destaque.widget_destaque, #home_destaque.widget {
+    margin: 0;
+}
+
+#home_destaque .textwidget {
+    margin-left: 10px;
+    width: 50px;
+    background-color: #666;
+    height: 300px;
 }
 
 .widget_destaque .hlTabs ul {

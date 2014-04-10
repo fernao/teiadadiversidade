@@ -40,12 +40,8 @@ class widget_hightlights extends WP_Widget
 		?>
         	<div id="hl-<?php echo $query->post->ID ?>">
 				
-				<?php the_post_thumbnail( array(777,256) ); ?>
-				<br />
-				<br />
-
-                <h2><a href="<?php the_permalink(); ?>"><?php limit_chars(get_the_title(), 66); ?></a></h2>
-                <?php limit_chars(get_the_excerpt(),120); ?>
+		   <?php the_post_thumbnail( array(777,256) ); ?>
+		   <h2><a href="<?php the_permalink(); ?>"><?php echo $query->post->post_title; ?></a></h2>
             </div>
         <?php
 		endwhile;

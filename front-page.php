@@ -48,11 +48,17 @@
 
 			<!-- #main -->
                         <!-- #home-header -->
+			  <div id="home_header-header">
                         <?php dynamic_sidebar('home_header'); ?>
+			  </div>
                         <!-- #home-destaque -->
+			  <div id="home_destaque-container">
                         <?php dynamic_sidebar('home_destaque'); ?>
+			  </div>
                         <!-- #home-menu -->
+			  <div id="home_menu-container">
                         <?php dynamic_sidebar('home_menu'); ?>
+			  </div>
 		</header><!-- #masthead -->
 		<div id="main" class="site-main">
 
