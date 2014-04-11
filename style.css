@@ -226,7 +226,7 @@ div.btn-interna {
 }
 
 /* linha do tempo */
-#linha-do-tempo { width: 750px; float: none; clear: both;}
+#linha-do-tempo { width: 750px; float: none; clear: both; margin: 0 auto; padding-top: 30px !important;}
 #linha-do-tempo div { height: 50px }
 #linha-do-tempo-title { 
     width: 750px; 
