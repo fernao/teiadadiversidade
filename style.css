@@ -78,8 +78,17 @@ body {
     width: 750px;
 }
 
+#home_header-container #logo_container {
+    float:left;
+    width: 533px;
+}
+
+/* temporario - nao fica bom para celular */
 #home_header-container .widget_text {
     width: 230px;
+    float: right;
+    position: relative;
+    top: -150px;    
 }
 
 /* botoes - links */
@@ -209,8 +218,8 @@ div.btn-interna {
 
 /* redes sociais */
 #redes-sociais div {
-  width: 35px;
-  height: 35px;
+  width: 26px;
+  height: 26px;
   display: inline-block;
 }
 
