@@ -89,6 +89,26 @@ body {
     top: -100px;
 }
 
+#apoio-logos img {
+  margin-top: 40px;
+}
+
+/* home-page - jaragua */
+.home-page .entry-title {
+  display: none;
+}
+
+.home-page article {
+  float: right;
+  width: 60%;
+  background-color: #fff;
+}
+
+.home-page .comment-respond {
+  background-color: #fff
+}
+
+
 /* temporario - nao fica bom para celular */
 #home_header-container .widget_text {
     width: 230px;
@@ -101,7 +121,6 @@ body {
 
 /* botoes - links */
 div.btn-home-container {
-    background-color: #F00;
     width: 100%;
 }
 div.btn-home {
@@ -179,7 +198,6 @@ div.btn-interna {
 
 /* aba de destaque da home  */
 #home_menu-container div {
-    margin-top: 30px;
 }
 
 #home_destaque-container {
