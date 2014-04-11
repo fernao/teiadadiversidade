@@ -120,7 +120,7 @@ div.btn-interna {
 #btn-fotos .img-btn{ background-image: url(../../../wp-content/themes/teiadadiversidade/img/galeria.img.png);}
 #btn-tvteia .img-btn { background-image: url(../../../wp-content/themes/teiadadiversidade/img/tvteia.img.png); } 
 #btn-radioteia .img-btn { background-image: url(../../../wp-content/themes/teiadadiversidade/img/radioteia.img.png); }
-#btn-colaborativo .img-btn { background-image: url(../../../wp-content/themes/teiadadiversidade/img/colaborativo.img.png); }
+#btn-colaborativo .img-btn { background-image: url(../../../wp-content/themes/teiadadiversidade/img/colaborativa.img.png); }
 #btn-inscricoes .img-btn { background-image: url(../../../wp-content/themes/teiadadiversidade/img/inscricoes.img.png); }
 #btn-localizacao .img-btn { background-image: url(../../../wp-content/themes/teiadadiversidade/img/localizacao.img.png); }
 #btn-imprensa .img-btn { background-image: url(../../../wp-content/themes/teiadadiversidade/img/imprensa.img.png); }
@@ -131,30 +131,30 @@ div.btn-interna {
 #btn-fotos .img-btn:hover { background-image: url(../../../wp-content/themes/teiadadiversidade/img/galeria.txt.png);}
 #btn-tvteia .img-btn:hover { background-image: url(../../../wp-content/themes/teiadadiversidade/img/tvteia.txt.png); }
 #btn-radioteia .img-btn:hover { background-image: url(../../../wp-content/themes/teiadadiversidade/img/radioteia.txt.png); }
-#btn-colaborativo .img-btn:hover { background-image: url(../../../wp-content/themes/teiadadiversidade/img/colaborativo.txt.png); }
+#btn-colaborativo .img-btn:hover { background-image: url(../../../wp-content/themes/teiadadiversidade/img/colaborativa.txt.png); }
 #btn-inscricoes .img-btn:hover { background-image: url(../../../wp-content/themes/teiadadiversidade/img/inscricoes.txt.png); }
 #btn-localizacao .img-btn:hover { background-image: url(../../../wp-content/themes/teiadadiversidade/img/localizacao.txt.png); }
 #btn-imprensa .img-btn:hover { background-image: url(../../../wp-content/themes/teiadadiversidade/img/imprensa.txt.png); }
 #btn-contato .img-btn:hover { background-image: url(../../../wp-content/themes/teiadadiversidade/img/contato.txt.png); }
 
 /* menu pq */
-.btn-interna #btn-culturaviva .img-btn { background-image: url(../../../wp-content/themes/teiadadiversidade/img/culturaviva.pq.png); }
-.btn-interna #btn-programacao .img-btn { background-image: url(../../../wp-content/themes/teiadadiversidade/img/programacao.pq.png); }
-.btn-interna #btn-fotos .img-btn{ background-image: url(../../../wp-content/themes/teiadadiversidade/img/galeria.pq.png);}
-.btn-interna #btn-tvteia .img-btn { background-image: url(../../../wp-content/themes/teiadadiversidade/img/tvteia.pq.png); } 
-.btn-interna #btn-radioteia .img-btn { background-image: url(../../../wp-content/themes/teiadadiversidade/img/radioteia.pq.png); }
-.btn-interna #btn-colaborativo .img-btn { background-image: url(../../../wp-content/themes/teiadadiversidade/img/colaborativo.pq.png); }
-.btn-interna #btn-inscricoes .img-btn { background-image: url(../../../wp-content/themes/teiadadiversidade/img/inscricoes.pq.png); }
-.btn-interna #btn-localizacao .img-btn { background-image: url(../../../wp-content/themes/teiadadiversidade/img/localizacao.pq.png); }
-.btn-interna #btn-imprensa .img-btn { background-image: url(../../../wp-content/themes/teiadadiversidade/img/imprensa.pq.png); }
-.btn-interna #btn-contato .img-btn { background-image: url(../../../wp-content/themes/teiadadiversidade/img/contato.pq.png); }
+.btn-interna #btn-culturaviva .img-btn { background-image: url(../../../wp-content/themes/teiadadiversidade/img/culturaviva.img.pq.png); }
+.btn-interna #btn-programacao .img-btn { background-image: url(../../../wp-content/themes/teiadadiversidade/img/programacao.img.pq.png); }
+.btn-interna #btn-fotos .img-btn{ background-image: url(../../../wp-content/themes/teiadadiversidade/img/galeria.img.pq.png);}
+.btn-interna #btn-tvteia .img-btn { background-image: url(../../../wp-content/themes/teiadadiversidade/img/tvteia.img.pq.png); } 
+.btn-interna #btn-radioteia .img-btn { background-image: url(../../../wp-content/themes/teiadadiversidade/img/radioteia.img.pq.png); }
+.btn-interna #btn-colaborativo .img-btn { background-image: url(../../../wp-content/themes/teiadadiversidade/img/colaborativa.img.pq.png); }
+.btn-interna #btn-inscricoes .img-btn { background-image: url(../../../wp-content/themes/teiadadiversidade/img/inscricoes.img.pq.png); }
+.btn-interna #btn-localizacao .img-btn { background-image: url(../../../wp-content/themes/teiadadiversidade/img/localizacao.img.pq.png); }
+.btn-interna #btn-imprensa .img-btn { background-image: url(../../../wp-content/themes/teiadadiversidade/img/imprensa.img.pq.png); }
+.btn-interna #btn-contato .img-btn { background-image: url(../../../wp-content/themes/teiadadiversidade/img/contato.img.pq.png); }
 
 .btn-interna #btn-culturaviva .img-btn:hover { background-image: url(../../../wp-content/themes/teiadadiversidade/img/culturaviva.txt.pq.png); }
 .btn-interna #btn-programacao .img-btn:hover { background-image: url(../../../wp-content/themes/teiadadiversidade/img/programacao.txt.pq.png); }
 .btn-interna #btn-fotos .img-btn:hover{ background-image: url(../../../wp-content/themes/teiadadiversidade/img/galeria.txt.pq.png);}
 .btn-interna #btn-tvteia .img-btn:hover { background-image: url(../../../wp-content/themes/teiadadiversidade/img/tvteia.txt.pq.png); } 
 .btn-interna #btn-radioteia .img-btn:hover { background-image: url(../../../wp-content/themes/teiadadiversidade/img/radioteia.txt.pq.png); }
-.btn-interna #btn-colaborativo .img-btn:hover { background-image: url(../../../wp-content/themes/teiadadiversidade/img/colaborativo.txt.pq.png); }
+.btn-interna #btn-colaborativo .img-btn:hover { background-image: url(../../../wp-content/themes/teiadadiversidade/img/colaborativa.txt.pq.png); }
 .btn-interna #btn-inscricoes .img-btn:hover { background-image: url(../../../wp-content/themes/teiadadiversidade/img/inscricoes.txt.pq.png); }
 .btn-interna #btn-localizacao .img-btn:hover { background-image: url(../../../wp-content/themes/teiadadiversidade/img/localizacao.txt.pq.png); }
 .btn-interna #btn-imprensa .img-btn:hover { background-image: url(../../../wp-content/themes/teiadadiversidade/img/imprensa.txt.pq.png); }
