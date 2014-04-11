@@ -214,7 +214,51 @@ div.btn-interna {
 }
 
 /* linha do tempo */
+#linha-do-tempo { width: 750px; float: none; clear: both;}
+#linha-do-tempo div { height: 50px }
+#linha-do-tempo-title { 
+    width: 750px; 
+    height:24px;
+    background: url(../../../wp-content/themes/teiadadiversidade/img/linhadotempo.png) no-repeat scroll right top rgba(0, 0, 0, 0) !important;
+}
+#linha-do-tempo-cidades { background-image: url(../../../wp-content/themes/teiadadiversidade/img/tempo-cidades.png); height: 72px !important; }
+#linha-do-tempo-links div { float: left; }
+#tempo-anos { 
+    background-image: url(../../../wp-content/themes/teiadadiversidade/img/tempo-anos.png); 
+    height: 37px !important;
+}
 
+#tempo-teia0 div { 
+    background-image: url(../../../wp-content/themes/teiadadiversidade/img/tempo-teia0.png); 
+    width: 87px;
+ } 
+#tempo-teia1 div {
+    background-image: url(../../../wp-content/themes/teiadadiversidade/img/tempo-teia1.png);
+    width: 143px;
+}
+#tempo-teia2 div {
+    background-image: url(../../../wp-content/themes/teiadadiversidade/img/tempo-teia2.png); 
+    width: 140px;
+}
+#tempo-teia3 div {
+    background-image: url(../../../wp-content/themes/teiadadiversidade/img/tempo-teia3.png); 
+    width: 139px;
+}
+#tempo-teia4 div { 
+    background-image: url(../../../wp-content/themes/teiadadiversidade/img/tempo-teia4.png); 
+    width: 104px;
+}
+#tempo-teia5 div { 
+    background-image: url(../../../wp-content/themes/teiadadiversidade/img/tempo-teia5.png); 
+    width: 133px;
+}
+
+#tempo-teia0 div:hover { background-image: url(../../../wp-content/themes/teiadadiversidade/img/tempo-teiaazul0.png); }
+#tempo-teia1 div:hover { background-image: url(../../../wp-content/themes/teiadadiversidade/img/tempo-teiaazul1.png); }
+#tempo-teia2 div:hover { background-image: url(../../../wp-content/themes/teiadadiversidade/img/tempo-teiaazul2.png); } 
+#tempo-teia3 div:hover { background-image: url(../../../wp-content/themes/teiadadiversidade/img/tempo-teiaazul3.png); }
+#tempo-teia4 div:hover { background-image: url(../../../wp-content/themes/teiadadiversidade/img/tempo-teiaazul4.png); }
+#tempo-teia5 div:hover { background-image: url(../../../wp-content/themes/teiadadiversidade/img/tempo-teiaazul5.png); }
 
 /* redes sociais */
 #redes-sociais div {
