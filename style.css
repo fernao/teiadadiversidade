@@ -29,7 +29,7 @@ body {
     clear: both;
 }
 
-.site-header {background: none !important }
+.site-header {background: none !important; padding-top: 30px }
 
 .site-logo {
     background: url(img/logo.teia.png) no-repeat scroll left top rgba(0, 0, 0, 0) !important;
@@ -76,19 +76,27 @@ body {
 #home_header-container {
     margin: 0 auto;
     width: 750px;
+    clear: both;
 }
 
-#home_header-container #logo_container {
+#logo-container {
     float:left;
     width: 533px;
+}
+
+.site-header .search-field {
+    position: relative;
+    top: -100px;
 }
 
 /* temporario - nao fica bom para celular */
 #home_header-container .widget_text {
     width: 230px;
-    float: right;
     position: relative;
-    top: -150px;    
+    float: right;
+    top: -150px;
+    padding: 0;    
+    margin: 0;
 }
 
 /* botoes - links */
@@ -170,6 +178,10 @@ div.btn-interna {
 .btn-interna #btn-contato .img-btn:hover { background-image: url(../../../wp-content/themes/teiadadiversidade/img/contato.txt.pq.png); }
 
 /* aba de destaque da home  */
+#home_menu-container div {
+    margin-top: 30px;
+}
+
 #home_destaque-container {
     max-width:750px; 
     margin: 0 auto;
@@ -265,16 +277,15 @@ div.btn-interna {
   width: 26px;
   height: 26px;
   display: inline-block;
+  margin: 5px;
 }
+
+.site-header .search-field { top: 150px }
 
 div .facebook { background-image: url(../../../wp-content/themes/teiadadiversidade/img/facebook.png); }
 div .youtube { background-image: url(../../../wp-content/themes/teiadadiversidade/img/youtube.png); }
 div .instagram { background-image: url(../../../wp-content/themes/teiadadiversidade/img/instagram.png); }
 div .twitter { background-image: url(../../../wp-content/themes/teiadadiversidade/img/twitter.png); }
+div .soundcloud { background-image: url(../../../wp-content/themes/teiadadiversidade/img/soundcloud.png); }
 div .acessibilidade { background-image: url(../../../wp-content/themes/teiadadiversidade/img/acessibilidade.png); }
-
-
-
-
-
 
