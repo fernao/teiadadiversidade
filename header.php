@@ -38,6 +38,7 @@
 <body <?php body_class(); ?>>
 	<div id="page" class="hfeed site">
 		<header id="masthead" class="site-header" role="banner">
+			<div id="header-content">
                         <!-- #home-header -->
 			  <div id="home_header-container">
 			    <div id="logo-container">
@@ -55,6 +56,7 @@
 			  <div id="home_menu-container">
                         <?php dynamic_sidebar('home_menu'); ?>
 			  </div>
+			</div>
 		</header><!-- #masthead -->
    
 		<div id="main" class="site-main">
