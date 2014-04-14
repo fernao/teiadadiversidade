@@ -29,11 +29,12 @@ div.widget_destaque div.hlTabs ul.ui-tabs-nav li a{
 	width:5px;
 	height:5px;
 	font-weight:normal;
-	margin-right:5px;
+	margin-right:10px;
 	padding:0 5px 2px;
 	text-decoration:none;
 	position: relative;
 	top: 25px;
+        cursor: pointer;
 }
 div.widget_destaque div.hlTabs ul.ui-tabs-nav li.ui-tabs-selected a,
 div.widget_destaque div.hlTabs ul.ui-tabs-nav li.ui-state-hover a{

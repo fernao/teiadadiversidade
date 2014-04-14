@@ -21,5 +21,6 @@
 	</div><!-- #page -->
 
 	<?php wp_footer(); ?>
+	<div class="barra-colorida"></div>
 </body>
 </html>
