@@ -75,7 +75,7 @@ body {
 
 #home_header-container {
     margin: 0 auto;
-    width: 750px;
+    max-width: 1000px;
     clear: both;
 }
 
@@ -104,14 +104,6 @@ body {
   background-color: #fff;
 }
 
-.home-page .comment-respond {
-  background-color: #fff
-}
-
-.home-page #comments {
-  display: none;
-}
-
 #main {
   height: 100%;
 }
@@ -120,11 +112,10 @@ body {
   padding-top: 600px;
 }
 
-/* temporario - nao fica bom para celular */
-#home_header-container .widget_text {
-    width: 250px;
+/* logos de redes sociais em cima */
+#home_header .widget_text {
+    width: 265px;
     position: relative;
-    float: right;
     top: -150px;
     padding: 0;    
     margin: 0;
@@ -303,11 +294,16 @@ div.btn-interna {
 #tempo-teia5 div:hover { background-image: url(../../../wp-content/themes/teiadadiversidade/img/tempo-teiaazul5.png); }
 
 /* redes sociais */
-#redes-sociais div {
+#redes-sociais div.icon {
   width: 26px;
   height: 26px;
   display: inline-block;
   margin: 2px;
+}
+
+#redes-sociais div.texto {
+  float: right;
+  text-align: left;
 }
 
 .site-header .search-field { top: 150px }
@@ -318,4 +314,31 @@ div .instagram { background-image: url(../../../wp-content/themes/teiadadiversid
 div .twitter { background-image: url(../../../wp-content/themes/teiadadiversidade/img/twitter.png); }
 div .soundcloud { background-image: url(../../../wp-content/themes/teiadadiversidade/img/soundcloud.png); }
 div .acessibilidade { background-image: url(../../../wp-content/themes/teiadadiversidade/img/acessibilidade.png); }
+div .corais { background-image: url(../../../wp-content/themes/teiadadiversidade/img/corais.png); }
+div .juntadados { background-image: url(../../../wp-content/themes/teiadadiversidade/img/juntadados.png); }
 
+/* listagem de noticias */
+.page-id-147 .recent-posts a p {
+  color: #000;
+}
+
+.page-id-147 h4 {
+  border-top: 2px solid #aaa;
+}
+
+.page-id-147 .recent-posts a .thumb-noticia {
+  float:left;
+  padding-right: 10px;
+}
+
+.page-id-147 .paginacao {
+  border-top: 3px solid #ccc;
+  text-align: center;
+  font-size: 16px;
+  color: #666;
+}
+
+.page-id-147 .nav-dir {
+  font-size: 20px;
+  font-weight: bold;
+}
