@@ -39,9 +39,11 @@ class widget_hightlights extends WP_Widget
 		while($query->have_posts()) : $query->the_post();
 		?>
         	<div id="hl-<?php echo $query->post->ID ?>">
-				
+		   <a href="<?php the_permalink() ?>">
 		   <?php the_post_thumbnail( array(777,256) ); ?>
-		   <h2><a href="<?php the_permalink(); ?>"><?php echo $query->post->post_title; ?></a></h2>
+	 	   </a>
+		   <h2><a href="<?php the_permalink() ?>"><?php echo $query->post->post_title; ?></h2>
+                   </a>
             </div>
         <?php
 		endwhile;
