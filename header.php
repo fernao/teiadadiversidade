@@ -64,7 +64,6 @@
 <?php if ( is_active_sidebar( 'coluna_esquerda' ) ) { ?>
 <?php dynamic_sidebar('coluna_esquerda'); ?>
 <?php } else { ?>
-<div id="coluna_esquerda"></div>
 <?php } ?>
 <?php if ( is_active_sidebar( 'coluna_direita' ) ) { ?>
  <?php dynamic_sidebar('coluna_direita'); ?>

@@ -24,6 +24,10 @@ body {
     clear: both;
 }
 
+a {
+  text-decoration: none;
+}
+
 #footer #colophon {
     height: 100%;
 }
@@ -115,6 +119,14 @@ body {
   background-color: #fff;
 }
 
+.home-page article header {
+  display: none;
+}
+
+.home-page #coluna_direita-container {
+  display: none;
+}
+
 #main {
   height: 100%;
 }
@@ -202,6 +214,8 @@ div.btn-interna {
 .btn-interna #btn-localizacao .img-btn { background-image: url(img/localizacao.img.pq.png); }
 .btn-interna #btn-imprensa .img-btn { background-image: url(img/imprensa.img.pq.png); }
 .btn-interna #btn-contato .img-btn { background-image: url(img/contato.img.pq.png); }
+.btn-interna #btn-mais .img-btn { background-image: url(img/mais.img.pq.png); }
+.btn-interna #btn-memoria .img-btn { background-image: url(img/memoria.img.pq.png); }
 
 .btn-interna #btn-culturaviva .img-btn:hover { background-image: url(img/culturaviva.txt.pq.png); }
 .btn-interna #btn-programacao .img-btn:hover { background-image: url(img/programacao.txt.pq.png); }
@@ -213,6 +227,15 @@ div.btn-interna {
 .btn-interna #btn-localizacao .img-btn:hover { background-image: url(img/localizacao.txt.pq.png); }
 .btn-interna #btn-imprensa .img-btn:hover { background-image: url(img/imprensa.txt.pq.png); }
 .btn-interna #btn-contato .img-btn:hover { background-image: url(img/contato.txt.pq.png); }
+.btn-interna #btn-mais .img-btn:hover { background-image: url(img/mais.txt.pq.png); }
+.btn-interna #btn-memoria .img-btn:hover { background-image: url(img/memoria.txt.pq.png); }
+
+
+.botoes-destaque div { width: 47px; height: 300px; float:left; }
+#maisnoticias-destaque div { background-image: url(img/maisnoticias.destaque.png); margin-left: 3px; }
+#memoria-destaque div { background-image: url(img/memoria.destaque.png); margin-left: 3px; }
+#maisnoticias-destaque div:hover { background-image: url(img/maisnoticias.destaque.hover.png); }
+#memoria-destaque div:hover { background-image: url(img/memoria.destaque.hover.png); }
 
 /* aba de destaque da home  */
 #home_menu-container div {
@@ -245,9 +268,8 @@ div.btn-interna {
 }
 
 #home_destaque .textwidget {
-    margin-left: 10px;
+    margin-left: 6px;
     width: 100px;
-    background-color: #666;
     height: 300px;
 }
 
@@ -359,12 +381,27 @@ div .juntadados { background-image: url(../../../wp-content/themes/teiadadiversi
 }
 
 /* memoria */
-.page-id-25 #coluna_esquerda_interna-page h2 {
-  font-size: 16px;
+.page-id-25 .coluna_esquerda-container,
+.page-id-25 .coluna_direita-container { 
+  max-width: 700px;
 }
 
-.page-id-25 #coluna_esquerda_interna-page {
-  background-color: #eec;
+.coluna_direita-container {
+  padding-top: 35px;
+}
+
+.page-id-25 #coluna_esquerda_interna-page p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.page-id-25 #coluna_esquerda_interna-page p.texto {
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.page-id-25 #coluna_esquerda_interna-page,
+.page-id-25 #coluna_direita_interna-page {
   padding: 4px;
   width: 170px;
   min-width:160px;
@@ -372,15 +409,43 @@ div .juntadados { background-image: url(../../../wp-content/themes/teiadadiversi
   margin: 2px;
 }
 
+.page-id-25 #coluna_esquerda_interna-page {
+  padding: 0;
+}
+
+.page-id-25 #coluna_esquerda_interna-page .memoria {
+  padding: 4px;
+  height: 350px;
+  border-radius: 5px;
+  width: 170px;
+}
+
+.page-id-25 #coluna_direita { width: 15%; float: left; min-width: 60px}
+
+.page-id-25 .widget_text .memoria-2006 {  background-color: #f2e4e9; }
+.page-id-25 .widget_text .memoria-2007 {  background-color: #f2ebcc; }
+.page-id-25 .widget_text .memoria-2008 {  background-color: #e8eeef; }
+.page-id-25 .widget_text .memoria-2010 {  background-color: #e8efd0; }
+
+.page-id-25 .widget_listcategorypostswidget {
+  background-color: #f6f6f6;
+}
+
 .page-id-25 #coluna_esquerda_interna-page a {
   color: #333;
 }
 
-.page-id-25 #primary {
+.page-id-25 #coluna_direita_interna-page h2 {
+  display: none;
+}
+
+.page-id-25 #primary, .page-id-10 #primary {
   width: 85%;
 }
 
-.page-id-25 .entry-header, .entry-content, .entry-summary, .entry-meta {
+.page-id-25 .entry-header, .page-id-25 .entry-content, .page-id-25 .entry-summary, .page-id-25 .entry-meta,
+.page-id-10 .entry-header, .page-id-10 .entry-content, .page-id-10 .entry-summary, .page-id-10 .entry-meta, 
+ {
   margin-left: 50px;
   width: 85%;
 }

@@ -41,12 +41,16 @@ get_header(); ?>
 				</article><!-- #post -->
 
 <?php if ( is_active_sidebar( 'coluna_esquerda_interna-page' ) ) { ?>
+<div class="coluna_esquerda-container">
 <?php dynamic_sidebar('coluna_esquerda_interna-page'); ?>
+</div>
 <?php } else { ?>
 <div id="coluna_esquerda_interna-page"></div>
 <?php } ?>
+<div class="coluna_direita-container">
 <?php if ( is_active_sidebar( 'coluna_direita_interna-page' ) ) { ?>
  <?php dynamic_sidebar('coluna_direita_interna-page'); ?>
+</div>
 <?php } else { ?>
 <div id="coluna_direita_interna-page"></div>
 <?php } ?>
