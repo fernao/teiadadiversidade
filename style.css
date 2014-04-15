@@ -30,6 +30,19 @@ a {
     height: 100%;
 }
 
+.creative-commons {
+  background-image: url(img/cc.rodape.png);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 70px;
+  background-color: #CCCAC4;
+}
+
+.home-page .creative-commons {
+  z-index: 100;
+  float: left;
+}
+
 #content { 
     background: #fff;
 }
@@ -331,6 +344,11 @@ div.btn-interna {
 #tempo-teia5 div:hover { background-image: url(../../../wp-content/themes/teiadadiversidade/img/tempo-teiaazul5.png); }
 
 /* redes sociais */
+.home-page #redes-sociais {
+  width: 230px;
+  float: right;
+}
+
 #redes-sociais div.icon {
   width: 26px;
   height: 26px;
