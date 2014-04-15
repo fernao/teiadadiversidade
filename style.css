@@ -13,8 +13,6 @@ Template: twentythirteen
 @import url(css/widget.css);
 
 body {
-    background-image: url(img/fundo.png);
-    background-attachment: fixed;
 }
 
 .barra-colorida {
@@ -105,7 +103,7 @@ a {
 }
 
 #apoio-logos img {
-  margin-top: 40px;
+  margin-top: 70px;
 }
 
 /* home-page - jaragua */
@@ -265,6 +263,8 @@ div.btn-interna {
 #home_destaque.widget_text, #home_destaque.widget_destaque, #home_destaque.widget {
     margin: 0;
     height: 300px;
+    position: relative;
+    top: 36px;
 }
 
 #home_destaque .textwidget {
@@ -352,7 +352,14 @@ div .twitter { background-image: url(../../../wp-content/themes/teiadadiversidad
 div .soundcloud { background-image: url(../../../wp-content/themes/teiadadiversidade/img/soundcloud.png); }
 div .acessibilidade { background-image: url(../../../wp-content/themes/teiadadiversidade/img/acessibilidade.png); }
 div .corais { background-image: url(../../../wp-content/themes/teiadadiversidade/img/corais.png); }
-div .juntadados { background-image: url(../../../wp-content/themes/teiadadiversidade/img/juntadados.png); }
+div .culturadigital { background-image: url(../../../wp-content/themes/teiadadiversidade/img/cultura.digital.png); }
+div .diaspora { background-image: url(../../../wp-content/themes/teiadadiversidade/img/diaspora.png); }
+div .ebc { background-image: url(../../../wp-content/themes/teiadadiversidade/img/ebc.png); }
+div .iteia { background-image: url(../../../wp-content/themes/teiadadiversidade/img/iteia.png); }
+div .redelivre { background-image: url(../../../wp-content/themes/teiadadiversidade/img/rede.livre.png); }
+div .rnp { background-image: url(../../../wp-content/themes/teiadadiversidade/img/rnp.png); }
+div .softwarelivre { background-image: url(../../../wp-content/themes/teiadadiversidade/img/software.livre.png); }
+
 
 /* listagem de noticias */
 .page-id-147 .recent-posts a p {
