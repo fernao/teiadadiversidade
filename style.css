@@ -148,6 +148,10 @@ div.img-btn {
     height: 130px;
 }
 
+div.btn-home-container div.img-btn {
+    background-repeat: no-repeat;
+}
+
 /* interna */
 div.btn-interna-container {
     background-color: #F00;
@@ -263,37 +267,37 @@ div.btn-interna {
 #linha-do-tempo-title { 
     width: 750px; 
     height:24px;
-    background: url(../../../wp-content/themes/teiadadiversidade/img/linhadotempo.png) no-repeat scroll right top rgba(0, 0, 0, 0) !important;
+    background: url(img/linhadotempo.png) no-repeat scroll right top rgba(0, 0, 0, 0) !important;
 }
-#linha-do-tempo-cidades { background-image: url(../../../wp-content/themes/teiadadiversidade/img/tempo-cidades.png); height: 72px !important; }
+#linha-do-tempo-cidades { background-image: url(img/tempo-cidades.png); height: 72px !important; }
 #linha-do-tempo-links div { float: left; }
 #tempo-anos { 
-    background-image: url(../../../wp-content/themes/teiadadiversidade/img/tempo-anos.png); 
+    background-image: url(img/tempo-anos.png); 
     height: 37px !important;
 }
 
 #tempo-teia0 div { 
-    background-image: url(../../../wp-content/themes/teiadadiversidade/img/tempo-teia0.png); 
+    background-image: url(img/tempo-teia0.png); 
     width: 87px;
  } 
 #tempo-teia1 div {
-    background-image: url(../../../wp-content/themes/teiadadiversidade/img/tempo-teia1.png);
+    background-image: url(img/tempo-teia1.png);
     width: 143px;
 }
 #tempo-teia2 div {
-    background-image: url(../../../wp-content/themes/teiadadiversidade/img/tempo-teia2.png); 
+    background-image: url(img/tempo-teia2.png); 
     width: 140px;
 }
 #tempo-teia3 div {
-    background-image: url(../../../wp-content/themes/teiadadiversidade/img/tempo-teia3.png); 
+    background-image: url(img/tempo-teia3.png); 
     width: 139px;
 }
 #tempo-teia4 div { 
-    background-image: url(../../../wp-content/themes/teiadadiversidade/img/tempo-teia4.png); 
+    background-image: url(img/tempo-teia4.png); 
     width: 104px;
 }
 #tempo-teia5 div { 
-    background-image: url(../../../wp-content/themes/teiadadiversidade/img/tempo-teia5.png); 
+    background-image: url(img/tempo-teia5.png); 
     width: 133px;
 }
 
@@ -352,4 +356,31 @@ div .juntadados { background-image: url(../../../wp-content/themes/teiadadiversi
 .page-id-147 .nav-dir {
   font-size: 20px;
   font-weight: bold;
+}
+
+/* memoria */
+.page-id-25 #coluna_esquerda_interna-page h2 {
+  font-size: 16px;
+}
+
+.page-id-25 #coluna_esquerda_interna-page {
+  background-color: #eec;
+  padding: 4px;
+  width: 170px;
+  min-width:160px;
+  border-radius: 5px;
+  margin: 2px;
+}
+
+.page-id-25 #coluna_esquerda_interna-page a {
+  color: #333;
+}
+
+.page-id-25 #primary {
+  width: 85%;
+}
+
+.page-id-25 .entry-header, .entry-content, .entry-summary, .entry-meta {
+  margin-left: 50px;
+  width: 85%;
 }
