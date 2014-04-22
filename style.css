@@ -215,6 +215,8 @@ div.btn-interna {
 #btn-contato .img-btn:hover { background-image: url(img/contato.txt.png); }
 
 /* menu pq */
+.btn-interna #btn-memoria .img-btn { background-image: url(img/memoria.img.pq.png); }
+.btn-interna #btn-noticias .img-btn { background-image: url(img/noticias.img.pq.png); }
 .btn-interna #btn-culturaviva .img-btn { background-image: url(img/culturaviva.img.pq.png); }
 .btn-interna #btn-programacao .img-btn { background-image: url(img/programacao.img.pq.png); }
 .btn-interna #btn-fotos .img-btn{ background-image: url(img/galeria.img.pq.png);}
@@ -228,6 +230,8 @@ div.btn-interna {
 .btn-interna #btn-mais .img-btn { background-image: url(img/mais.img.pq.png); }
 .btn-interna #btn-memoria .img-btn { background-image: url(img/memoria.img.pq.png); }
 
+.btn-interna #btn-memoria .img-btn:hover { background-image: url(img/memoria.txt.pq.png); }
+.btn-interna #btn-noticias .img-btn:hover { background-image: url(img/noticias.txt.pq.png); }
 .btn-interna #btn-culturaviva .img-btn:hover { background-image: url(img/culturaviva.txt.pq.png); }
 .btn-interna #btn-programacao .img-btn:hover { background-image: url(img/programacao.txt.pq.png); }
 .btn-interna #btn-fotos .img-btn:hover{ background-image: url(img/galeria.txt.pq.png);}
