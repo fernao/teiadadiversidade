@@ -18,7 +18,6 @@ get_header(); ?>
 
 <h3>Notícias</h3>
 <?php
-
 $offset = $wp_query->query_vars['paged'];
 $numberposts = 10;
     
@@ -28,7 +27,8 @@ else $cur_page = 1;
 // Get posts
 $args = array(
         'posts_per_page' => $numberposts,
-        'paged'=> $cur_page
+        'paged'=> $cur_page,
+	'category_name' => 'noticias'
 ); 
 $posts = query_posts($args);
 
