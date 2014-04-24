@@ -84,6 +84,15 @@ a {
 
 .site-footer {background-color: #fff }
 
+.form-inscricao { padding-left: 30px}
+.form-inscricao input.texto {width: 400px}
+.form-inscricao input.cpf {width: 120px}
+.form-inscricao input.cep {width: 80px}
+.form-inscricao input.telefone {width: 130px}
+.form-inscricao input.web {width: 200px}
+.page-id-15 #primary {width: 90%; }
+.form-inscricao .error {color: #a00 }
+
 /* dynamic sidebars */
 #coluna_esquerda { width: 15%; float: left; min-width: 60px}
 #coluna_direita { width: 20%; float: right; min-width: 160px}

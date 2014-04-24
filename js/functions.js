@@ -24,6 +24,7 @@ jQuery(document).ready(function() {
       var imagem = new Image()
       imagem.src = img;
     }
+    
 /*
     preload([
     	'/wp-content/themes/teiadadiversidade/img/culturaviva.txt.png',
