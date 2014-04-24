@@ -121,6 +121,14 @@ function validaCPF($cpf) {
     }
 }
 
+function validaCEP($cep) {
+  if (is_numeric($cep)) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
 
 ////////////////////
 

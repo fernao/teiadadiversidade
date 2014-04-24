@@ -26,6 +26,10 @@ if (isset($_POST['action']) && $_POST['action'] == 'inscricao') {
     if (strlen($_POST['estado']) == 0 || strlen($_POST['municipio']) == 0) {
         $errors['local'] = __('Por favor selecione um estado e um município', 'teiadadiversidade');
     }
+
+    if (!validaCEP($_POST['cep'])) { 
+        $errors['valid_cep'] =  __('CEP inválido', 'teiadadiversidade');
+    }
     
     if (strlen($_POST['logradouro']) == 0) {
         $errors['email'] =  __('O logradouro é obrigatório.', 'teiadadiversidade');
@@ -38,36 +42,61 @@ if (isset($_POST['action']) && $_POST['action'] == 'inscricao') {
     if (strlen($_POST['ocupacao']) == 0) {
         $errors['ocupacao'] =  __('A ocupação é obrigatória.', 'teiadadiversidade');
     }
+
+    // sanitizacao dos campos
+    // caso haja erro, repassa
+    $data['nome'] = filter_var($_POST['nome'], FILTER_SANITIZE_STRING);
+    $data['cpf'] = filter_var($_POST['cpf'], FILTER_SANITIZE_STRING);
+    $data['estado'] = filter_var($_POST['estado'], FILTER_SANITIZE_STRING);
+    $data['municipio'] = filter_var($_POST['municipio'], FILTER_SANITIZE_STRING);
+    $data['logradouro'] = filter_var($_POST['logradouro'], FILTER_SANITIZE_STRING);
+    $data['complemento'] = filter_var($_POST['complemento'], FILTER_SANITIZE_STRING);
+    $data['bairro'] = filter_var($_POST['bairro'], FILTER_SANITIZE_STRING);
+    $data['localizacao'] = filter_var($_POST['localizacao'], FILTER_SANITIZE_STRING);
+    $data['ocupacao'] = filter_var($_POST['ocupacao'], FILTER_SANITIZE_STRING);
+    $data['atuacao'] = filter_var($_POST['atuacao'], FILTER_SANITIZE_STRING);
+    $data['telefone_cel'] = filter_var($_POST['telefone_cel'], FILTER_SANITIZE_NUMBER_INT);
+    $data['telefone_res'] = filter_var($_POST['telefone_res'], FILTER_SANITIZE_NUMBER_INT);
+    $data['telefone_com'] = filter_var($_POST['telefone_com'], FILTER_SANITIZE_NUMBER_INT);
+    $data['website'] = filter_var($_POST['website'], FILTER_VALIDATE_URL);
+    $data['facebook'] = filter_var($_POST['facebook'], FILTER_SANITIZE_STRING);
+    $data['twitter'] = filter_var($_POST['twitter'], FILTER_SANITIZE_STRING);
+    $data['youtube'] = filter_var($_POST['youtube'], FILTER_SANITIZE_STRING);
+    $data['google_plus'] = filter_var($_POST['google_plus'], FILTER_SANITIZE_STRING);
+    $data['website'] = filter_var($_POST['website'], FILTER_SANITIZE_URL);
+    $data['outras_redessociais'] = filter_var($_POST['outras_redessociais'], FILTER_SANITIZE_STRING);
+    $data['curriculo'] = filter_var($_POST['curriculo'], FILTER_SANITIZE_STRING);
+    
+    foreach($data as $key => $value) {
+      if ($value === false) {
+	$errors[$key] = __('Dados inválidos no campo: ' . $key, 'teiadadiversidade');
+	}
+    }	
     
     // se tudo passar sem erro:
     if (!sizeof($errors) > 0) {
-        $data['user_email'] =  $user_email;
-        $data['nome'] = $_POST['nome'];
-	$data['cpf'] = $_POST['cpf'];
-	$data['estado'] = $_POST['estado'];
-	$data['municipio'] = $_POST['municipio'];
-	$data['logradouro'] = $_POST['logradouro'];
-	$data['complemento'] = $_POST['complemento'];
-	$data['bairro'] = $_POST['bairro'];
-	$data['localizacao'] = $_POST['localizacao'];
-	$data['ocupacao'] = $_POST['ocupacao'];
-	$data['atuacao'] = $_POST['atuacao'];
-	$data['telefone_cel'] = $_POST['telefone_cel'];
-	$data['telefone_res'] = $_POST['telefone_res'];
-	$data['telefone_com'] = $_POST['telefone_com'];
-	$data['website'] = $_POST['website'];
-	$data['facebook'] = $_POST['facebook'];
-	$data['twitter'] = $_POST['twitter'];
-	$data['youtube'] = $_POST['youtube'];
-	$data['google_plus'] = $_POST['google_plus'];
-	$data['website'] = $_POST['website'];
-	$data['outras_redessociais'] = $_POST['outras_redessociais'];
-	$data['curriculo'] = $_POST['curriculo'];
-	
-	print_r($data);
+
+      
+      $fileNameCsv = dirname(__FILE__) . '/data/inscricoes.csv';
+
+      // se arquivo nao existir, cria
+      if(!is_file($fileNameCsv)) {
+        fclose(fopen($fileNameCsv,"x"));
+      }
+      
+      $fp = fopen($fileNameCsv, 'a');
+      
+      if(file_get_contents($fileNameCsv) == '') {  
+	$header = array_keys($data);
+	fputcsv($fp, $header);
+      }
+      
+      fputcsv($fp, $data);
+      fclose($fp);
+      chmod($fileNameCsv, 0400);
     } else {
-        foreach($errors as $type=>$msg)
-            $msgs['error'][] = $msg;
+      foreach($errors as $type=>$msg)
+	$msgs['error'][] = $msg;
     }
 }
 
@@ -184,7 +213,7 @@ the_post();
                         <textarea id="curriculo" name="curriculo"><?php echo isset($_POST['curriculo']) ? esc_attr($_POST['curriculo']) : ''; ?></textarea><br />
 			
                     </p>
-                    <p><input type="checkbox" name="concordo" value="1" <?php isset($_POST['concordo']) ? checked($_POST['concordo'], true) : ''; ?>/> Li e concordo com os <a href="<?php echo network_site_url('termos-de-uso'); ?>">termos de uso</a> da consulta.</p>
+                    <p><input type="checkbox" name="concordo" value="1" <?php isset($_POST['concordo']) ? checked($_POST['concordo'], true) : ''; ?>/> Li e concordo com os <a href="<?php echo network_site_url('termos-de-uso'); ?>">termos de uso</a> da inscrição / SNIIC.</p>
                     <input type="submit" value="Cadastrar" class="button-submit" />
                 </form>
 		</div>
