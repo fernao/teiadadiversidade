@@ -213,7 +213,7 @@ the_post();
                         <textarea id="curriculo" name="curriculo"><?php echo isset($_POST['curriculo']) ? esc_attr($_POST['curriculo']) : ''; ?></textarea><br />
 			
                     </p>
-                    <p><input type="checkbox" name="concordo" value="1" <?php isset($_POST['concordo']) ? checked($_POST['concordo'], true) : ''; ?>/> Li e concordo com os <a href="<?php echo network_site_url('termos-de-uso'); ?>">termos de uso</a> da inscrição / SNIIC.</p>
+                    <p><input type="checkbox" name="concordo" value="1" <?php isset($_POST['concordo']) ? checked($_POST['concordo'], true) : ''; ?>/> Li e concordo com os <a href="/teiadadiversidade/<?php echo network_site_url('termos-de-uso'); ?>">termos de uso</a> da inscrição / SNIIC.</p>
                     <input type="submit" value="Cadastrar" class="button-submit" />
                 </form>
 		</div>
