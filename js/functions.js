@@ -24,6 +24,10 @@ jQuery(document).ready(function() {
       var imagem = new Image()
       imagem.src = img;
     }
+
+    delegados = function() {
+	jQuery('#texto_delegado').html('Para delegados/delegadas, é necessário preencher também um <a target="_blank" href="http://corais.org/teiadadiversidade/node/80752">formulário de inscrições específico.</a>')
+    }
     
 /*
     preload([

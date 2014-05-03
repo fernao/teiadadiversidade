@@ -90,6 +90,7 @@ a {
 .form-inscricao input.cep {width: 80px}
 .form-inscricao input.telefone {width: 130px}
 .form-inscricao input.web {width: 200px}
+.form-inscricao textarea {width: 500px}
 .page-id-15 #primary {width: 90%; }
 .form-inscricao .error {color: #a00 }
 
@@ -487,3 +488,5 @@ div .softwarelivre { background-image: url(../../../wp-content/themes/teiadadive
   margin-left: 50px;
   width: 85%;
 }
+
+label {font-weight: bold; padding-top: 10px}
