@@ -397,8 +397,6 @@ Especifique &nbsp;<input id="segmentos_outros" type="text" name="segmentos_outro
                         <label>Fator RH</label><br />
 			<input id="fator_rh" type="radio" name="fator_rh" class="fator_rh" value="negativo" <?php if (isset($_POST['fator_rh']) && $_POST['fator_rh'] == 'negativo') echo 'checked'; ?>  > Negativo
 			<input id="fator_rh" type="radio" name="fator_rh" class="fator_rh" value="positivo" <?php if (isset($_POST['fator_rh']) && $_POST['fator_rh'] == 'positivo') echo 'checked'; ?>  > Positivo
-
-			<input id="fator_rh" type="radio" name="fator_rh" class="fator_rh" value="positivo" <?php if (isset($_POST['fator_rh']) && $_POST['fator_rh'] == 'positivo') echo 'checked'; ?>  > Positivo
 <br/>
                         <label>Plano de saúde</label><br />
 			<input id="plano_saude" type="radio" name="plano_saude" class="plano_saude" value="sim" <?php if (isset($_POST['plano_saude']) && $_POST['plano_saude'] == 'sim') echo 'checked'; ?>  > Sim

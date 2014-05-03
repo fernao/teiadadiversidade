@@ -26,7 +26,7 @@ jQuery(document).ready(function() {
     }
 
     delegados = function() {
-	jQuery('#texto_delegado').html('Para delegados/delegadas, é necessário preencher também um <a target="_blank" href="http://corais.org/teiadadiversidade/node/80752">formulário de inscrições específico.</a>')
+	jQuery('#texto_delegado').html('<strong>ATENÇÃO: Para delegados/delegadas, é necessário preencher também um <a target="_blank" href="http://corais.org/teiadadiversidade/node/80752">formulário de inscrições específico.</a></strong>')
     }
     
 /*
