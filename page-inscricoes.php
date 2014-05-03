@@ -2,6 +2,8 @@
 /*
 Template Name: Cadastro
 */
+$successMessage = "";
+
 if (isset($_POST['action']) && $_POST['action'] == 'inscricao') {
     $errors = array();
     
@@ -73,6 +75,9 @@ if (isset($_POST['action']) && $_POST['action'] == 'inscricao') {
 
     if (strlen($_POST['telefone_emergencia']) == 0) {
         $errors['telefone_emergencia'] =  __('Informe um telefone de emergência.', 'teiadadiversidade');
+    }
+    if (strlen($_POST['entidade_nome']) == 0) {
+        $errors['entidade_nome'] =  __('Informe o nome da entidade à qual você está vinculado.', 'teiadadiversidade');
     }
     
     // sanitizacao dos campos
@@ -188,6 +193,12 @@ if (isset($_POST['action']) && $_POST['action'] == 'inscricao') {
       fputcsv($fp, $data);
       fclose($fp);
       //      chmod($fileNameCsv, 0400);
+
+      $successMessage = "<h4 style='color: #c00'>Inscrição realizada com sucesso!</h4><br/>
+<a href='http://culturadigital.br/teiadadiversidade/'>Voltar para a página inicial</a>";
+
+      $_POST = '';
+            
     } else {
       foreach($errors as $type=>$msg)
 	$msgs['error'][] = $msg;
@@ -199,8 +210,12 @@ the_post();
 ?>
 
 <?php get_header(); ?>
+
 	<div id="primary" class="content-area form-inscricao">
 		<div id="content" class="site-content" role="main">
+
+<?php if ($successMessage != "") { print $successMessage; }  ?>
+
 
 		<header>					
 			<h1>Cadastro</h1>					
@@ -318,7 +333,7 @@ Outros &nbsp;<input id="segmentos_outros" type="text" name="segmentos_outros" cl
                         <label>Localização </label><br />
                         <input id="localizacao" type="text" name="localizacao" class="texto" value="<?php echo isset($_POST['localizacao']) ? esc_attr($_POST['localizacao']) : ''; ?>" /><br />
   
-                 <h4 class="subtitulo">Atuação</h4>
+                 <h4 class="subtitulo">Atuação *</h4>
                         <label>Área de Atuação</label><br />
                         <select name="atuacao" id="atuacao">
                             <?php $areas = teiadadiversidade_get_theme_option('areas_atuacao'); $areas = explode("\n", $areas); ?>
