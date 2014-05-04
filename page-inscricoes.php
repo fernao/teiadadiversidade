@@ -224,13 +224,14 @@ the_post();
             <?php print_msgs($msgs);?>
 
 
-<p>  Atenção: com exceção dos delegados eleitos nos fóruns estaduais de pontos de cultura, este cadastro não garante participação imediata no evento e nem cobertura de custos por parte do Ministério da Cultura, sendo portanto uma pré inscrição passível de validação por parte da organização do evento. Por favor aguarde retorno por email. </p>
+<P>  ATENÇÃO: COM EXCEÇÃO DOS DELEGADOS ELEITOS NOS FÓRUNS ESTADUAIS DE PONTOS DE CULTURA, ESTE CADASTRO NÃO GARANTE PARTICIPAÇÃO IMEDIATA NO EVENTO E NEM COBERTURA DE CUSTOS POR PARTE DO MINISTÉRIO DA CULTURA, SENDO PORTANTO UMA PRÉ INSCRIÇÃO PASSÍVEL DE VALIDAÇÃO POR PARTE DA ORGANIZAÇÃO DO EVENTO. POR FAVOR AGUARDE RETORNO POR EMAIL. </P>
             
                     <form method="POST" name="inscricao" id="form-inscricao" action="">
                     <input id="action" type="hidden" name="action" value="inscricao" />
                     <h3 class="subtitulo">Dados para realização da inscrição na TEIA 2014</h3>
                         <label>Presença</label><br />
-  <input id="presenca_participante" type="radio" name="presenca" class="presenca" value="participante"  <?php if (isset($_POST['presenca']) && $_POST['presenca'] == 'participante') echo 'checked'; ?>  onclick="participante()"> Participante<br/>
+  <input id="presenca" type="radio" name="presenca" class="presenca" value="participante"  <?php if (isset($_POST['presenca']) && $_POST['presenca'] == 'participante') echo 'checked'; ?>  onclick="participante()"> Participante<br/>
+  <input id="presenca" type="radio" name="presenca" class="presenca" value="convidado"  <?php if (isset($_POST['presenca']) && $_POST['presenca'] == 'convidado') echo 'checked'; ?>  onclick="participante()"> Convidado/Convidada<br/>
   <input id="presenca_delegado" type="radio" name="presenca" class="presenca" value="delegado"  <?php if (isset($_POST['presenca']) && $_POST['presenca'] == 'delegado') echo 'checked'; ?> onclick="delegados()" > Delegado/delegada do Fórum Nacional dos Pontos de Cultura
 <br/><br/>
 <div id="texto_delegado"></div>
