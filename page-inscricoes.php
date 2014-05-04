@@ -233,7 +233,7 @@ the_post();
   <input id="presenca_participante" type="radio" name="presenca" class="presenca" value="participante"  <?php if (isset($_POST['presenca']) && $_POST['presenca'] == 'participante') echo 'checked'; ?>  onclick="participante()"> Participante<br/>
   <input id="presenca_delegado" type="radio" name="presenca" class="presenca" value="delegado"  <?php if (isset($_POST['presenca']) && $_POST['presenca'] == 'delegado') echo 'checked'; ?> onclick="delegados()" > Delegado/delegada do Fórum Nacional dos Pontos de Cultura
 <div id="texto_delegado"></div>
-				<br/>
+				<br/><br/>
 <div id="inscricao-participante">
                     <h4>Dados pessoais</h4>
                         <label>Nome *</label><br />
