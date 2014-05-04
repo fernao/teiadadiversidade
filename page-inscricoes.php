@@ -152,6 +152,7 @@ if (isset($_POST['action']) && $_POST['action'] == 'inscricao') {
     $data['segmentos_cigano'] = filter_var($_POST['segmentos_cigano'], FILTER_SANITIZE_STRING);       
     $data['segmentos_pesquisador'] = filter_var($_POST['segmentos_pesquisador'], FILTER_SANITIZE_STRING);       
     $data['segmentos_brasil_plural'] = filter_var($_POST['segmentos_brasil_plural'], FILTER_SANITIZE_STRING);       
+    $data['segmentos_representante_comites'] = filter_var($_POST['segmentos_representante_comites'], FILTER_SANITIZE_STRING);       
     $data['segmentos_outros'] = filter_var($_POST['segmentos_outros'], FILTER_SANITIZE_STRING);    
 
     $data['dialogos_forum_nacional_pontos_cultura'] = filter_var($_POST['dialogos_forum_nacional_pontos_cultura'], FILTER_SANITIZE_STRING);    
@@ -286,6 +287,7 @@ the_post();
 						  'segmentos_cigano' => 'Cigana/cigano',
 						  'segmentos_pesquisador' => 'Pesquisadora/pesquisador',
 						  'segmentos_brasil_plural' => 'Programa Brasil Plural (LGBT, Gênero, Infância, Juventude, Quilombola, Pessoas com deficiência, Idosos, Povos e Comunidades Tradicionais, Culturas Populares)',
+						  'segmentos_representante_comites' => 'Representante de comitês / colegiados / conselhos'
 						  ];
 ?>
 <?php foreach ($segmentos_lst as $seg_key => $seg_value) { ?>
