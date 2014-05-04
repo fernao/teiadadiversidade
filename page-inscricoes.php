@@ -222,10 +222,19 @@ the_post();
 		</header>
 		<div class="post-content clearfix">
             <?php print_msgs($msgs);?>
+
+
+<p>  Atenção: com exceção dos delegados eleitos nos fóruns estaduais de pontos de cultura, este cadastro não garante participação imediata no evento e nem cobertura de custos por parte do Ministério da Cultura, sendo portanto uma pré inscrição passível de validação por parte da organização do evento. Por favor aguarde retorno por email. </p>
             
                     <form method="POST" name="inscricao" id="form-inscricao" action="">
                     <input id="action" type="hidden" name="action" value="inscricao" />
                     <h3 class="subtitulo">Dados para realização da inscrição na TEIA 2014</h3>
+                        <label>Presença</label><br />
+  <input id="presenca_participante" type="radio" name="presenca" class="presenca" value="participante"  <?php if (isset($_POST['presenca']) && $_POST['presenca'] == 'participante') echo 'checked'; ?>  onclick="participante()"> Participante<br/>
+  <input id="presenca_delegado" type="radio" name="presenca" class="presenca" value="delegado"  <?php if (isset($_POST['presenca']) && $_POST['presenca'] == 'delegado') echo 'checked'; ?> onclick="delegados()" > Delegado/delegada do Fórum Nacional dos Pontos de Cultura
+<div id="texto_delegado"></div>
+				<br/>
+<div id="inscricao-participante">
                     <h4>Dados pessoais</h4>
                         <label>Nome *</label><br />
                         <input id="nome" type="text" name="nome" class="texto" value="<?php echo isset($_POST['nome']) ? esc_attr($_POST['nome']) : ''; ?>" /><br />
@@ -265,11 +274,6 @@ the_post();
                         <label>Data de saída</label><br />
                         <input id="data_saida" type="text" name="data_saida" class="data_saida" value="<?php echo isset($_POST['data_saida']) ? esc_attr($_POST['data_saida']) : ''; ?>" /><br />
 
-                        <label>Presença</label><br />
-  <input id="presenca_participante" type="radio" name="presenca" class="presenca" value="participante"  <?php if (isset($_POST['presenca']) && $_POST['presenca'] == 'participante') echo 'checked'; ?>  > Participante
-  <input id="presenca_delegado" type="radio" name="presenca" class="presenca" value="delegado"  <?php if (isset($_POST['presenca']) && $_POST['presenca'] == 'delegado') echo 'checked'; ?> onclick="delegados()" > Delegado/delegada do Fórum Nacional dos Pontos de Cultura
-<div id="texto_delegado"></div>
-				<br/>
 				<label>Segmentos</label><br />
 <?php 
 				$segmentos_lst = [
@@ -292,7 +296,7 @@ Outros &nbsp;<input id="segmentos_outros" type="text" name="segmentos_outros" cl
 <?php 
  $dialogos_lst = [
 		  'dialogos_forum_nacional_pontos_cultura' => 'Fórum Nacional dos Pontos de Cultura',
-		  'dialogos_forum_indigena' => 'Diálogos Fórum Indígena',
+		  'dialogos_forum_indigena' => 'Fórum Indígena',
 		  'dialogos_forum_culturas_negras' => 'Fórum Culturas Negras',
 		  'dialogos_forum_gestores_culturaviva' => 'Fórum de Gestores Estaduais e Municipais do Programa Cultura Viva',
 		  'dialogos_encontro_pontos_memoria' => 'Encontro dos Pontos de Memória',
@@ -485,8 +489,9 @@ Especifique &nbsp;<input id="segmentos_outros" type="text" name="segmentos_outro
 
 
                     </p>
-                    <p><input type="checkbox" name="concordo" value="1" <?php isset($_POST['concordo']) ? checked($_POST['concordo'], true) : ''; ?>/> Li e concordo com os <a href="/teiadadiversidade/<?php echo network_site_url('termos-de-uso'); ?>">termos de uso</a> da inscrição / SNIIC.</p>
+                    <p><input type="checkbox" name="concordo" value="1" <?php isset($_POST['concordo']) ? checked($_POST['concordo'], true) : ''; ?>/> Li e concordo com os <a href="/teiadadiversidade/<?php echo network_site_url('termos-de-uso'); ?>">termos de uso</a> da inscrição.</p>
                     <input type="submit" value="Cadastrar" class="button-submit" />
+</div> <!-- fim #inscricao-participante -->
                 </form>
 		</div>
 		<!-- .post-content -->
