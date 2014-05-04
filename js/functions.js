@@ -26,7 +26,7 @@ jQuery(document).ready(function() {
     }
 
     delegados = function() {
-	jQuery('#texto_delegado').html('<p>strong>ATENÇÃO: Para delegados/delegadas do Fórum Nacional do Pontos de Cultura, é necessário preencher um formulário de inscrições específico na plataforma Corais: <a target="_blank" href="http://corais.org/teiadadiversidade/node/80752">formulário de inscrições específico.</a></strong></p>');
+	jQuery('#texto_delegado').html('<p><strong>ATENÇÃO: Para delegados/delegadas do Fórum Nacional do Pontos de Cultura, é necessário preencher um formulário de inscrições específico na plataforma Corais: <a target="_blank" href="http://corais.org/teiadadiversidade/node/80752">formulário de inscrições específico.</a></strong></p>');
 	jQuery('#inscricao-participante').hide();
     }
     
