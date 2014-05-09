@@ -126,7 +126,7 @@ the_post();
                         <label>Cargo</label><br />
                         <input id="cargo" type="text" name="cargo" class="texto" value="<?php echo isset($_POST['cargo']) ? esc_attr($_POST['cargo']) : ''; ?>" /><br />
 
-                 <h4 class="subtitulo">Veículo</h4>
+                      <label>Veículo</label><br />
 <?php 
   $veiculos = [
 	       'tv' => 'TV',
