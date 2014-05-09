@@ -154,7 +154,7 @@ the_post();
                         <input id="facebook" type="text" name="facebook" class="texto" value="<?php echo isset($_POST['facebook']) ? esc_attr($_POST['facebook']) : ''; ?>" /><br />
 
   <input id="receber" type="checkbox" name="receber" class="receber" value="sim"  <?php if (isset($_POST[$dia_key]) && $_POST[$dia_key] == $dia_key) echo 'checked'; ?>  &nbsp;
-				<label>Desejo receber releases e boletins informativos sobre a TEIA da Diversidade por e-mail? </label><br />
+<label> &nbsp;Desejo receber releases e boletins informativos sobre a TEIA da Diversidade por e-mail? </label><br />
                       <input type="submit" value="Cadastrar" class="button-submit" />
 </div>
                 </form>
