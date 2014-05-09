@@ -301,7 +301,7 @@ Outros &nbsp;<input id="segmentos_outros" type="text" name="segmentos_outros" cl
  $dialogos_lst = [
 		  'dialogos_forum_nacional_pontos_cultura' => 'Fórum Nacional dos Pontos de Cultura',
 		  'dialogos_forum_indigena' => 'Fórum Indígena',
-		  'dialogos_forum_culturas_negras' => 'Fórum Culturas Negras',
+		  'dialogos_forum_culturas_negras' => 'Fórum de Culturas Afro-Brasileiras',
 		  'dialogos_forum_gestores_culturaviva' => 'Fórum de Gestores Estaduais e Municipais do Programa Cultura Viva',
 		  'dialogos_encontro_pontos_memoria' => 'Encontro dos Pontos de Memória',
 		  'dialogos_encontro_pontos_leitura' => 'Encontro dos Pontos de Leitura',
