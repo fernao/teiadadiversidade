@@ -131,8 +131,8 @@ the_post();
   $veiculos = [
 	       'tv' => 'TV',
 	       'radio' => 'Rádio',
-	       'web' => 'Web',
-	       'jornal_impresso' => 'Jornal Impresso'
+	       'midia_digital' => 'Mídia Digital',
+	       'midia_impressa' => 'Mídia Impressa'
 	       ];
 ?>
                         <select name="veiculo" id="veiculo">

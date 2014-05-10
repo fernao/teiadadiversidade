@@ -148,6 +148,11 @@ a {
   display: none;
 }
 
+/*noticias da home */
+.home-page #coluna_esquerda-container-page .widget_listcategorypostswidget  {
+  text-align: left !important;
+}
+
 #main {
   height: 100%;
 }
