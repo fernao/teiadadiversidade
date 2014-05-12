@@ -22,6 +22,18 @@ if (isset($_POST['action']) && $_POST['action'] == 'inscricao') {
         $errors['local'] = __('Por favor selecione um estado e um município', 'teiadadiversidade');
     }
     
+    if (strlen($_POST['nome_empresa']) == 0) {
+        $errors['nome_empresa'] =  __('O nome da empresa é obrigatório.', 'teiadadiversidade');
+    }
+
+    if (strlen($_POST['cargo']) == 0) {
+        $errors['cargo'] =  __('O cargo é obrigatório.', 'teiadadiversidade');
+    }
+
+    if (strlen($_POST['telefone']) == 0) {
+        $errors['telefone'] =  __('O telefone é obrigatório.', 'teiadadiversidade');
+    }
+
     
     // sanitizacao dos campos
     // caso haja erro, repassa
@@ -38,6 +50,7 @@ if (isset($_POST['action']) && $_POST['action'] == 'inscricao') {
     $data['website'] = filter_var($_POST['website'], FILTER_SANITIZE_STRING);
     $data['facebook'] = filter_var($_POST['facebook'], FILTER_SANITIZE_STRING);
     $data['twitter'] = filter_var($_POST['twitter'], FILTER_SANITIZE_STRING);
+    $data['outros'] = filter_var($_POST['outros'], FILTER_SANITIZE_STRING);
     $data['receber'] = filter_var($_POST['receber'], FILTER_SANITIZE_STRING);
 
 
@@ -121,12 +134,12 @@ the_post();
                       <label>Email *</label><br />
                         <input id="email" type="text" name="email" class="texto" value="<?php echo isset($_POST['email']) ? esc_attr($_POST['email']) : ''; ?>" /><br />
 
-                        <label>Nome da Empresa</label><br />
+                        <label>Nome da Empresa *</label><br />
                         <input id="nome_empresa" type="text" name="nome_empresa" class="texto" value="<?php echo isset($_POST['nome_empresa']) ? esc_attr($_POST['nome_empresa']) : ''; ?>" /><br />
-                        <label>Cargo</label><br />
+                        <label>Cargo *</label><br />
                         <input id="cargo" type="text" name="cargo" class="texto" value="<?php echo isset($_POST['cargo']) ? esc_attr($_POST['cargo']) : ''; ?>" /><br />
 
-                      <label>Veículo</label><br />
+                      <label>Veículo *</label><br />
 <?php 
   $veiculos = [
 	       'tv' => 'TV',
@@ -144,7 +157,7 @@ the_post();
                             <?php endforeach; ?>
                         </select><br />
 				
-                        <label>Telefone</label><br />
+                        <label>Telefone *</label><br />
                         <input id="telefone" type="text" name="telefone" class="texto" value="<?php echo isset($_POST['telefone']) ? esc_attr($_POST['telefone']) : ''; ?>" /><br />
                         <label>Ramal</label><br />
                         <input id="ramal" type="text" name="ramal" class="texto" value="<?php echo isset($_POST['ramal']) ? esc_attr($_POST['ramal']) : ''; ?>" /><br />
@@ -152,9 +165,13 @@ the_post();
                         <input id="website" type="text" name="website" class="texto" value="<?php echo isset($_POST['website']) ? esc_attr($_POST['website']) : ''; ?>" /><br />
                         <label>Facebook</label><br />
                         <input id="facebook" type="text" name="facebook" class="texto" value="<?php echo isset($_POST['facebook']) ? esc_attr($_POST['facebook']) : ''; ?>" /><br />
+                        <label>Twitter</label><br />
+                        <input id="twitter" type="text" name="twitter" class="texto" value="<?php echo isset($_POST['twitter']) ? esc_attr($_POST['twitter']) : ''; ?>" /><br />
+                        <label>Outros</label><br />
+                        <input id="outros" type="text" name="outros" class="texto" value="<?php echo isset($_POST['outros']) ? esc_attr($_POST['outros']) : ''; ?>" /><br />
 
   <input id="receber" type="checkbox" name="receber" class="receber" value="sim"  <?php if (isset($_POST[$dia_key]) && $_POST[$dia_key] == $dia_key) echo 'checked'; ?>  &nbsp;
-<label> &nbsp;Desejo receber releases e boletins informativos sobre a TEIA da Diversidade por e-mail? </label><br /><br />
+<label> &nbsp;Deseja receber releases e boletins informativos sobre a TEIA da Diversidade por e-mail? </label><br /><br />
                       <input type="submit" value="Cadastrar" class="button-submit" />
 </div>
                 </form>
