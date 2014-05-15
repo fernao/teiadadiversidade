@@ -507,8 +507,11 @@ label {font-weight: bold; padding-top: 10px}
     text-align: left;
 }
 
+.page-id-134 .fetch-tweets-widget,
 .page-id-134 .widgettitle {
-    font-size: 30px;
-    font-family: bitter;
+    font: 30px bitter,Helvetica,sans-serif
 }
 
+.page-id-134 h2 {
+    margin: 0;
+}
