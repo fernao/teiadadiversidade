@@ -94,10 +94,6 @@ a {
 .page-id-15 #primary {width: 90%; }
 .form-inscricao .error {color: #a00 }
 
-.page-id-134 .primary {
-  width: 80%
-}
-
 /* dynamic sidebars */
 #coluna_esquerda { width: 15%; float: left; min-width: 60px}
 #coluna_direita { width: 20%; float: right; min-width: 160px}
@@ -500,3 +496,19 @@ div .comissaopontoscultura { background-image: url(../../../wp-content/themes/te
 }
 
 label {font-weight: bold; padding-top: 10px}
+
+/* cobertura colaborativa */
+.page-id-134 #primary {
+    width: 80%
+}
+
+.page-id-134 #coluna_esquerda_interna-page,
+.page-id-134 #coluna_direita_interna-page {
+    text-align: left;
+}
+
+.page-id-134 .widgettitle {
+    font-size: 30px;
+    font-family: bitter;
+}
+
