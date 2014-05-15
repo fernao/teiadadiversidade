@@ -164,7 +164,7 @@ if (isset($_POST['action']) && $_POST['action'] == 'inscricao') {
     $data['dialogos_encontro_pesquisadores_politicas_culturais'] = filter_var($_POST['dialogos_encontro_pesquisadores_politicas_culturais'], FILTER_SANITIZE_STRING);    
     $data['dialogos_seminario_acessibilidade'] = filter_var($_POST['dialogos_seminario_acessibilidade'], FILTER_SANITIZE_STRING);    
     $data['dialogos_conferencia_livre_educacao_cultura'] = filter_var($_POST['dialogos_conferencia_livre_educacao_cultura'], FILTER_SANITIZE_STRING);    
-    
+    $data['email'] = filter_var($_POST['email'], FILTER_SANITIZE_STRING);  
     
     
     foreach($data as $key => $value) {
