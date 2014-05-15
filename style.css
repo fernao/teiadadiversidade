@@ -94,6 +94,10 @@ a {
 .page-id-15 #primary {width: 90%; }
 .form-inscricao .error {color: #a00 }
 
+.page-id-134 .primary {
+  width: 80%
+}
+
 /* dynamic sidebars */
 #coluna_esquerda { width: 15%; float: left; min-width: 60px}
 #coluna_direita { width: 20%; float: right; min-width: 160px}
