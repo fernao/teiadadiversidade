@@ -20,3 +20,14 @@ if (!get_option('teiadadiversidade-db-update-2')) {
         $wpdb->query($query);
     }
 }
+
+// cria tabela de inscricoes
+if (!get_option('teiadadiversidade-db-update-3')) {
+  update_option('teiadadiversidade-db-update-3', 1);
+    global $wpdb;
+    require_once('inscricoes.php');
+    
+    foreach ($inscricoes_queries as $query) {
+        $wpdb->query($query);
+    }
+}

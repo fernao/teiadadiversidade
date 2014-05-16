@@ -167,38 +167,81 @@ if (isset($_POST['action']) && $_POST['action'] == 'inscricao') {
     $data['email'] = filter_var($_POST['email'], FILTER_SANITIZE_STRING);  
     
     
+    // verifica se cpf já foi inserido no banco. Se sim, retona erro.
+
+    $cpf = $data['cpf'];    
+    global $wpdb;
+    //$cpf_existe = $wpdb->get_var($wpdb->prepare("SELECT id FROM teia_inscricao WHERE cpf LIKE %s", $cpf));
+    
+    if ($cpf_existe) { 
+      $errors['cpf_duplicado'] = __('CPF já cadastrado no banco de dados');
+    }    
+    
+    
     foreach($data as $key => $value) {
       if ($value === false) {
 	$errors[$key] = __('Dados inválidos no campo: ' . $key, 'teiadadiversidade');
 	}
     }	
     
+    function generate_CSV($data) { 
+      $fileNameCsv = $folder . '/data/planilha-inscricoes.csv';      
+      $fp = fopen($fileNameCsv, 'a');
+      $data['curriculo'] = '';
+      // so vai adicionar
+      fputcsv($fp, $data);
+      fclose($fp);      
+    }
+    
+    function insert_inscricao($data) {
+      global $wpdb;
+      $wpdb->insert('teia_inscricao', $data);
+    }
+    
+    function send_mail_inscricao($data) {
+
+      $urlComprovante = "http://culturadigital.br/teiadadiversidade/comprovante-de-inscricao/?action=consulta_inscricao&cpf=" . $data['cpf'];
+      
+      $email = $data['email'];
+      $subject = "[TEIA] Pré-inscrição realizada com sucesso!";
+
+      $message = "
+<style>
+h3 {
+    font-family: Bitter,Georgia,serif;
+    line-height: 1.3;
+}
+p {
+    font-size: 14px;
+}
+</style>
+
+<h3>Teia da Diversidade</h3>
+
+<p>Sua pré-inscrição na Teia da Diversidade foi realizada com sucesso! </p>
+<p>Acesse seu comprovante clicando <a href='$urlComprovante'>aqui</a></p>
+
+<p>Caso o link acima não funcione, acesse a url:<br/></p>
+$urlComprovante
+
+<br/><br/>
+Atenciosamente,<br/>
+Equipe Técnica da TEIA da Diversidade
+
+";
+      $headers = "From: Teia da Diversidade<>";
+      wp_mail( $to, $subject, $message, $headers, $attachments ); 
+
+    }
+      
     // se tudo passar sem erro:
     if (!sizeof($errors) > 0) {
-
       
-      $fileNameCsv = dirname(__FILE__) . '/data/inscricoes.csv';
-
-      // se arquivo nao existir, cria
-      if(!is_file($fileNameCsv)) {
-        fclose(fopen($fileNameCsv,"x"));
-      }
-      
-      $fp = fopen($fileNameCsv, 'a');
-      
-      if(file_get_contents($fileNameCsv) == '') {  
-	$header = array_keys($data);
-	fputcsv($fp, $header);
-      }
-      
-      fputcsv($fp, $data);
-      fclose($fp);
-      //      chmod($fileNameCsv, 0400);
-
-      $successMessage = "<h4 style='color: #c00'>Inscrição realizada com sucesso!</h4><br/>
-<a href='http://culturadigital.br/teiadadiversidade/'>Voltar para a página inicial</a>";
-
-      $_POST = '';
+      insert_inscricao($data);
+      send_mail_inscricao($data);
+      generate_CSV();
+      $redirect_url = str_replace('inscricoes', 'comprovante-de-inscricao', $_SERVER['HTTP_REFERER']) . "?action=consulta_inscricao&cpf=" . $data['cpf'];;
+      header("location: $redirect_url");
             
     } else {
       foreach($errors as $type=>$msg)
@@ -249,7 +292,7 @@ the_post();
                         <label>Data Nascimento *</label><br />
                         <input id="data_nascimento" type="text" name="data_nascimento" class="data_nascimento" value="<?php echo isset($_POST['data_nascimento']) ? esc_attr($_POST['data_nascimento']) : ''; ?>" /><br />
 
-                        <label>Estado civil</label><br />
+                        <label>Estado civil *</label><br />
                         <input id="estado_civil" type="text" name="estado_civil" class="estado_civil" value="<?php echo isset($_POST['estado_civil']) ? esc_attr($_POST['estado_civil']) : ''; ?>" /><br />
 
                         <label>Sexo</label><br />
