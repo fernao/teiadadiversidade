@@ -83,7 +83,7 @@ if (isset($_POST['action']) && $_POST['action'] == 'inscricao') {
     // sanitizacao dos campos
     // caso haja erro, repassa
     $data['nome'] = filter_var($_POST['nome'], FILTER_SANITIZE_STRING);
-    $data['cpf'] = filter_var($_POST['cpf'], FILTER_SANITIZE_STRING);
+    $data['cpf'] = preg_replace("/[^0-9]/", "", filter_var($_POST['cpf'], FILTER_SANITIZE_STRING));
     $data['estado'] = filter_var($_POST['estado'], FILTER_SANITIZE_STRING);
     $data['municipio'] = filter_var($_POST['municipio'], FILTER_SANITIZE_STRING);
     $data['logradouro'] = filter_var($_POST['logradouro'], FILTER_SANITIZE_STRING);
@@ -246,7 +246,7 @@ the_post();
                         <label>CPF *</label><br />
                         <input id="cpf" type="text" name="cpf" class="cpf" value="<?php echo isset($_POST['cpf']) ? esc_attr($_POST['cpf']) : ''; ?>" /><br />
                         <input id="natureza_juridica" type="hidden" name="natureza_juridica" value="1" />
-                        <label>Data Nascimento</label><br />
+                        <label>Data Nascimento *</label><br />
                         <input id="data_nascimento" type="text" name="data_nascimento" class="data_nascimento" value="<?php echo isset($_POST['data_nascimento']) ? esc_attr($_POST['data_nascimento']) : ''; ?>" /><br />
 
                         <label>Estado civil</label><br />
@@ -263,18 +263,18 @@ the_post();
                             <?php endforeach; ?>
                         </select><br />
 
-                        <label>RG</label><br />
+                        <label>RG *</label><br />
                         <input id="rg" type="text" name="rg" class="rg" value="<?php echo isset($_POST['rg']) ? esc_attr($_POST['rg']) : ''; ?>" /><br />
 
-                        <label>Órgão emissor</label><br />
+                        <label>Órgão emissor *</label><br />
                         <input id="orgao_emissor" type="text" name="orgao_emissor" class="orgao_emissor" value="<?php echo isset($_POST['orgao_emissor']) ? esc_attr($_POST['orgao_emissor']) : ''; ?>" /><br />
-                        <label>Telefone de emergência</label><br />
+                        <label>Telefone de emergência *</label><br />
                         <input id="telefone_emergencia" type="text" name="telefone_emergencia" class="telefone_emergencia" value="<?php echo isset($_POST['telefone_emergencia']) ? esc_attr($_POST['telefone_emergencia']) : ''; ?>" /><br />
 
                    <h4 class="subtitulo">Sua participação no encontro</h4>
-                        <label>Data de chegada</label><br />
+                        <label>Data de chegada *</label><br />
                         <input id="data_chegada" type="text" name="data_chegada" class="data_chegada" value="<?php echo isset($_POST['data_chegada']) ? esc_attr($_POST['data_chegada']) : ''; ?>" /><br />
-                        <label>Data de saída</label><br />
+                        <label>Data de saída *</label><br />
                         <input id="data_saida" type="text" name="data_saida" class="data_saida" value="<?php echo isset($_POST['data_saida']) ? esc_attr($_POST['data_saida']) : ''; ?>" /><br />
 
 				<label>Segmentos</label><br />
