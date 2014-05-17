@@ -83,6 +83,7 @@ if (isset($_POST['action']) && $_POST['action'] == 'inscricao') {
     // sanitizacao dos campos
     // caso haja erro, repassa
     $data['nome'] = filter_var($_POST['nome'], FILTER_SANITIZE_STRING);
+    $data['email'] = filter_var($_POST['email'], FILTER_SANITIZE_STRING);  
     $data['cpf'] = preg_replace("/[^0-9]/", "", filter_var($_POST['cpf'], FILTER_SANITIZE_STRING));
     $data['estado'] = filter_var($_POST['estado'], FILTER_SANITIZE_STRING);
     $data['municipio'] = filter_var($_POST['municipio'], FILTER_SANITIZE_STRING);
@@ -164,7 +165,6 @@ if (isset($_POST['action']) && $_POST['action'] == 'inscricao') {
     $data['dialogos_encontro_pesquisadores_politicas_culturais'] = filter_var($_POST['dialogos_encontro_pesquisadores_politicas_culturais'], FILTER_SANITIZE_STRING);    
     $data['dialogos_seminario_acessibilidade'] = filter_var($_POST['dialogos_seminario_acessibilidade'], FILTER_SANITIZE_STRING);    
     $data['dialogos_conferencia_livre_educacao_cultura'] = filter_var($_POST['dialogos_conferencia_livre_educacao_cultura'], FILTER_SANITIZE_STRING);    
-    $data['email'] = filter_var($_POST['email'], FILTER_SANITIZE_STRING);  
     
     
     // verifica se cpf já foi inserido no banco. Se sim, retona erro.
@@ -532,7 +532,7 @@ Especifique &nbsp;<input id="segmentos_outros" type="text" name="segmentos_outro
 
                         <label>Outras redes sociais</label><br />
                         <input id="outras_redessociais" type="text" name="outras_redessociais" class="texto" value="<?php echo isset($_POST['outras_redessociais']) ? esc_attr($_POST['outras_redessociais']) : ''; ?>" /><br />
-                        <label>Currículo</label><br />
+																			 <label>Currículoi (resumido)</label><br />
                         <textarea id="curriculo" name="curriculo"><?php echo isset($_POST['curriculo']) ? esc_attr($_POST['curriculo']) : ''; ?></textarea><br />
 			
                         <label>Outras observações</label><br />
