@@ -229,6 +229,7 @@ Atenciosamente,<br/>
 Equipe Técnica da TEIA da Diversidade
 
 ";
+      $fromMail = "teianacional@gmail.com";
       $headers = "From: Teia da Diversidade<>";
       wp_mail( $to, $subject, $message, $headers, $attachments ); 
 
@@ -269,6 +270,8 @@ the_post();
 
 
 <P>  ATENÇÃO: COM EXCEÇÃO DOS DELEGADOS ELEITOS NOS FÓRUNS ESTADUAIS DE PONTOS DE CULTURA, ESTE CADASTRO NÃO GARANTE PARTICIPAÇÃO IMEDIATA NO EVENTO E NEM COBERTURA DE CUSTOS POR PARTE DO MINISTÉRIO DA CULTURA, SENDO PORTANTO UMA PRÉ-INSCRIÇÃO PASSÍVEL DE VALIDAÇÃO POR PARTE DA ORGANIZAÇÃO DO EVENTO. POR FAVOR AGUARDE RETORNO POR EMAIL. </P>
+  <p>Para emitir um comprovante de pré-inscrição, clique <a href="/teiadadiversidade/comprovante-de-inscricao">aqui</a></p>
+
             
                     <form method="POST" name="inscricao" id="form-inscricao" action="">
                     <input id="action" type="hidden" name="action" value="inscricao" />

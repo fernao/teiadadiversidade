@@ -6,13 +6,18 @@ if (isset($_GET['action']) && $_GET['action'] == 'consulta_inscricao') {
     $_GET['cpf'] = '';
   }
 
+  $cpf = filter_var($_GET['cpf'], FILTER_SANITIZE_STRING);
+  global $wpdb;
+  $data = $wpdb->get_results($wpdb->prepare("SELECT nome, cpf FROM teia_inscricao WHERE cpf LIKE %s", $cpf));
+  
+  $data = $data[0];
+  if (sizeof($data) == 0) {
+    $msgs['error'] = "Inscrição não cadastrada.";
+    $_GET['cpf'] = '';
+  }
+  
   // se tudo passar sem erro:
   if (!sizeof($errors) > 0) {
-    $cpf = filter_var($_GET['cpf'], FILTER_SANITIZE_STRING);
-    
-    global $wpdb;
-    $data = $wpdb->get_results($wpdb->prepare("SELECT nome, cpf FROM teia_inscricao WHERE cpf LIKE %s", $cpf));
-    $data = $data[0];
   } else {
     foreach($errors as $type=>$msg)
       $msgs['error'][] = $msg;
