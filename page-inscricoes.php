@@ -185,6 +185,7 @@ if (isset($_POST['action']) && $_POST['action'] == 'inscricao') {
     }	
     
     function generate_CSV($data) { 
+      $folder = dirname(__FILE__);
       $fileNameCsv = $folder . '/data/planilha-inscricoes.csv';      
       $fp = fopen($fileNameCsv, 'a');
       $data['curriculo'] = '';
