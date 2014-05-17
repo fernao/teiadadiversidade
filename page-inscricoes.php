@@ -241,7 +241,7 @@ Equipe Técnica da TEIA da Diversidade
       
       insert_inscricao($data);
       send_mail_inscricao($data);
-      generate_CSV();
+      generate_CSV($data);
       $redirect_url = str_replace('inscricoes', 'comprovante-de-inscricao', $_SERVER['HTTP_REFERER']) . "?action=consulta_inscricao&cpf=" . $data['cpf'];;
       header("location: $redirect_url");
             
