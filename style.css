@@ -520,10 +520,10 @@ label {font-weight: bold; padding-top: 10px}
     list-style-type: none;
 }
 
-#page-id-74 .entry-header, 
-#page-id-74 .entry-summary,
-#page-id-74 .entry-content,
-#page-id-74 .entry-meta {
+.page-id-74 .entry-header, 
+.page-id-74 .entry-summary,
+.page-id-74 .entry-content,
+.page-id-74 .entry-meta {
     max-width: 700px
 }
 
