@@ -523,7 +523,11 @@ label {font-weight: bold; padding-top: 10px}
 .page-id-74 .entry-header, 
 .page-id-74 .entry-summary,
 .page-id-74 .entry-content,
-.page-id-74 .entry-meta {
+.page-id-74 .entry-meta,
+.page-id-1369 .entry-header,
+.page-id-1369 .entry-content,
+.page-id-1369 .entry-summary,
+.page-id-1369 .entry-meta {
     max-width: 700px
 }
 
